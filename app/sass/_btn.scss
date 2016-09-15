@@ -1,0 +1,33 @@
+
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  height: 45px;
+  padding: 0 15px;
+  border: 2px solid $main-brown-color;
+  font-size: 13px;
+  color: $main-white-color;
+  line-height: 43px;
+  text-transform: uppercase;
+  @include main-font7();
+  transition: background .3s, color .3s;
+
+  &:hover {
+    background: $main-brown-color;
+    color: $main-white-color;
+
+    span {
+      color: $main-white-color;
+    }
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+
+
+}
+
+@media (min-width: $desktop-wide) {
+
+
+}
