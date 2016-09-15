@@ -20,43 +20,7 @@ var paths = {
         {
             dist: 'index.min.js',
             contains: [
-                'app/js/jquery.main.js',
-                'app/js/jquery.popup.js',
-                'app/js/jquery.btns.js',
-                'app/js/jquery.chat-animation.js'
-            ]
-        },
-        {
-            dist: 'case-studies.min.js',
-            contains: [
                 'app/js/jquery.main.js'
-            ]
-        },
-        {
-            dist: 'downloads.min.js',
-            contains: [
-                'app/js/jquery.main.js'
-            ]
-        },
-        {
-            dist: 'services.min.js',
-            contains: [
-                'app/js/jquery.main.js',
-                'app/js/jquery.accordion.js',
-                'app/js/jquery.btns.js'
-            ]
-        },
-        {
-            dist: 'case-study-single.min.js',
-            contains: [
-                'app/js/jquery.main.js'
-            ]
-        },
-        {
-            dist: 'about-us.min.js',
-            contains: [
-                'app/js/jquery.main.js',
-                'app/js/jquery.popup.js'
             ]
         }
     ],

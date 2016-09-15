@@ -2,21 +2,41 @@
 .btn {
   display: inline-block;
   vertical-align: top;
-  height: 45px;
-  padding: 0 15px;
-  border: 2px solid $main-brown-color;
-  font-size: 13px;
+  height: 55px;
+  padding: 0 36px;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  background: $main-brown-color;
+  font-size: 12px;
+  letter-spacing: 4px;
   color: $main-white-color;
-  line-height: 43px;
+  line-height: 53px;
   text-transform: uppercase;
   @include main-font7();
-  transition: background .3s, color .3s;
+  @include transition(all, .3, 0);
 
   &:hover {
-    background: $main-brown-color;
-    color: $main-white-color;
+    background: transparent;
+    border-color: $main-brown-color;
+    color: $main-brown-color;
+  }
 
-    span {
+  &_2 {
+    background: $main-white-color;
+    color: #333;
+
+    &:hover {
+      border-color: $main-white-color;
+      color: $main-white-color;
+    }
+  }
+  &_3 {
+    background: transparent;
+    border-color: #e6cab4;
+
+    &:hover {
+      background: transparent;
+      border-color: #e6cab4;
       color: $main-white-color;
     }
   }

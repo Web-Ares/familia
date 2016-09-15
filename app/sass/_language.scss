@@ -1,0 +1,79 @@
+/* --------------- language --------------- */
+.language{
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  z-index: 1;
+  width: 75px;
+  border: 2px solid #e6cab4;
+  font-size: 12px;
+  line-height: 26px;
+  text-align: left;
+  @include main-font8();
+  cursor: pointer;
+
+  &:after{
+    position: absolute;
+    top: 12px;
+    right: 13px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 4px 0 4px;
+    border-color: #e6cab4 transparent transparent transparent;
+    content: '';
+    @include transition(transform, .3, 0);
+  }
+  &:hover {
+
+    &:after {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+  }
+
+  a{
+    overflow: hidden;
+    display: block;
+    padding: 1px 25px 1px 13px;
+    color: $main-brown-color;
+    text-transform: uppercase;
+    transition: color .3s ease;
+
+    &:hover {
+      color: #e6cab4;
+    }
+  }
+  &__active {
+    display: block;
+
+    //a:hover {
+    //  color: ##e6cab4;
+    //}
+  }
+  &__dropdown {
+    display: none;
+    position: relative;
+    top: 5px;
+    a {
+      margin-bottom: 3px;
+    }
+  }
+}
+/* --------------- /language --------------- */
+
+@media (min-width: $tablet-portrait) {
+
+
+}
+
+@media (min-width: $tablet-landscape) {
+
+
+
+}
+
+@media (min-width: $desktop) {
+
+
+}
