@@ -14,10 +14,11 @@ $header-menu-btn-opened: #fff;
 $footer-bg: #333;
 $footer-text-color: #999;
 $footer-crafted-color: #5c5c5c;
+$footer-title-color: #e6cab4;
 
 /*---------- popup ----------*/
 $popup-back: rgba( 255, 255, 255, .98 );
-$popup-close-back: #f7cc0a;
+$popup-close-back: #000;
 /*---------- /popup ---------*/
 
 /*---------- websters-select ----------*/
@@ -30,9 +31,10 @@ $websters-select-popup-item-active-color: #bbb;
 
 /*---------- btn ----------*/
 $btn-back: #fff;
-$btn-2-border: #fff;
-$btn-2-color: #fff;
-$btn-search-color: #fbfbfb;
+$btn-hover-back: #e6cab4;
+$btn-2-color: #333;
+$btn-3-border-color: #e6cab4;
+
 /*---------- /btn ---------*/
 
 
@@ -40,4 +42,19 @@ $btn-search-color: #fbfbfb;
 $nice-checkbox-color: #bbb;
 $nice-checkbox-active-color: #1d242d;
 /*---------- /nice-checkbox ---------*/
+
+/*---------- language ----------*/
+$language-border-color: #e6cab4;
+$language-hover-color: #e6cab4;
+/*---------- /language ---------*/
+
+/*---------- language ----------*/
+$language-border-color: #e6cab4;
+$language-hover-color: #e6cab4;
+/*---------- /language ---------*/
+
+/*---------- lour-list----------*/
+$our-list-title-color: #e6cab4;
+$our-list-hover-color: #f9f9f9;
+/*---------- /our-list ---------*/
 

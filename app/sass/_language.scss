@@ -1,11 +1,11 @@
-/* --------------- language --------------- */
+
 .language{
   display: inline-block;
   vertical-align: top;
   position: relative;
   z-index: 1;
   width: 75px;
-  border: 2px solid #e6cab4;
+  border: 2px solid $language-border-color;
   font-size: 12px;
   line-height: 26px;
   text-align: left;
@@ -20,7 +20,7 @@
     height: 0;
     border-style: solid;
     border-width: 5px 4px 0 4px;
-    border-color: #e6cab4 transparent transparent transparent;
+    border-color: $language-border-color transparent transparent transparent;
     content: '';
     @include transition(transform, .3, 0);
   }
@@ -36,20 +36,16 @@
     overflow: hidden;
     display: block;
     padding: 1px 25px 1px 13px;
-    color: $main-brown-color;
+    color: $main-white-color;
     text-transform: uppercase;
     transition: color .3s ease;
 
     &:hover {
-      color: #e6cab4;
+      color: $language-hover-color;
     }
   }
   &__active {
     display: block;
-
-    //a:hover {
-    //  color: ##e6cab4;
-    //}
   }
   &__dropdown {
     display: none;
@@ -60,7 +56,6 @@
     }
   }
 }
-/* --------------- /language --------------- */
 
 @media (min-width: $tablet-portrait) {
 
@@ -70,10 +65,15 @@
 @media (min-width: $tablet-landscape) {
 
 
-
 }
 
 @media (min-width: $desktop) {
 
+  .language{
 
+
+    a{
+      color: $main-brown-color;
+    }
+  }
 }

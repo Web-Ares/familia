@@ -156,7 +156,7 @@
 
         span {
           @include main-font8();
-          color: #e6cab4;
+          color: $footer-title-color;
           letter-spacing: -1.8px;
         }
       }
@@ -220,6 +220,32 @@
     background-size: cover;
     background-position: center;
   }
+  &__hero-wrap {
+    position: relative;
+    max-width: 1650px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  &__hero-partner {
+    padding: 60px 0;
+
+    h1 {
+
+      margin-bottom: 35px;
+      color: $main-white-color;
+      font-size: 25px;
+      line-height: 37px;
+      letter-spacing: -1.8px;
+      @include  main-font5();
+
+      span {
+        display: block;
+        font-size: 38px;
+        letter-spacing: -2.3px;
+        @include  main-font8()
+      }
+    }
+  }
   &__centered {
     position: relative;
     z-index: 1;
@@ -227,6 +253,10 @@
     max-width: 1200px;
     padding: 0 13px;
     margin: 0 auto;
+
+    &_wide {
+      max-width: 1650px;
+    }
   }
   &__content {
     position: relative;
@@ -235,6 +265,35 @@
 }
 
 @media (min-width: $tablet-portrait) {
+
+  .site {
+
+    &__hero-wrap {
+      height: 325px;
+    }
+    &__hero-partner {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      display: flex;
+      flex-flow: column;
+      align-items: flex-start;
+      justify-content: center;
+      width: 40%;
+      padding: 10px 0 0;
+
+      h1 {
+        font-size: 32px;
+        line-height: 45px;
+
+        span {
+          font-size: 40px;
+        }
+      }
+    }
+
+  }
 
 }
 @media (min-width: $tablet-landscape) {
@@ -325,6 +384,7 @@
         > div {
           position: relative;
           top: -6px;
+          right: -3px;
           display: inline-block;
 
           .btn {
@@ -354,8 +414,22 @@
       }
     }
     &__hero {
-      padding: 180px 0 0;
       height: 560px;
+    }
+    &__hero-wrap {
+      height: 560px;
+    }
+    &__hero-partner {
+      width: 611px;
+
+      h1 {
+        font-size: 47px;
+        line-height: 59px;
+
+        span {
+          font-size: 70px;
+        }
+      }
     }
   }
 }
