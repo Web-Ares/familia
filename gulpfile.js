@@ -28,6 +28,12 @@ var paths = {
             contains: [
                 'app/js/jquery.main.js'
             ]
+        },
+        {
+            dist: 'contact.min.js',
+            contains: [
+                'app/js/jquery.main.js'
+            ]
         }
     ],
     vendorScripts: 'app/js/vendors/**/*.js',

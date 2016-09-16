@@ -17,6 +17,20 @@
       max-width: 1650px;
       margin: 0 auto;
     }
+    &_inner {
+
+      .site__menu-btn {
+
+        span {
+          background: $main-white-color;
+
+          &:after,
+          &:before {
+            background: $main-white-color;
+          }
+        }
+      }
+    }
   }
   &__menu {
     position: fixed;
@@ -219,6 +233,39 @@
     min-height: 227px;
     background-size: cover;
     background-position: center;
+
+    &_inner {
+      margin-top: -50px;
+      padding: 100px 15px 50px;
+
+      &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(178,142,123, .85);
+        content: '';
+      }
+    }
+  }
+  &__hero-title {
+    position: relative;
+    z-index: 2;
+    font-size: 25px;
+    line-height: 37px;
+    letter-spacing: -0.6px;
+    color: $hero-title-color;
+    text-align: center;
+    @include main-font5();
+
+     span {
+       display: block;
+       font-size: 38px;
+       letter-spacing: -2.7px;
+       color: $main-white-color;
+       @include main-font8();
+     }
   }
   &__hero-wrap {
     position: relative;
@@ -315,6 +362,29 @@
     &__header {
       height: 160px;
       @include transition(all, .3, 0);
+
+      &_inner {
+
+        .language{
+
+          a{
+            color: $main-white-color;
+          }
+        }
+        .site__menu {
+
+          .site__menu-item {
+            a {
+              color: #e6cab4;
+
+              &.active,
+              &:hover {
+                color: $main-white-color;
+              }
+            }
+          }
+        }
+      }
     }
     &__content {
 
@@ -414,10 +484,24 @@
       }
     }
     &__hero {
-      height: 560px;
+      min-height: 560px;
+
+      &_inner {
+        min-height: 515px;
+        margin-top: -160px;
+        padding: 297px 15px 100px;
+      }
+    }
+    &__hero-title {
+      font-size: 29px;
+      line-height: 50px;
+
+      span {
+        font-size: 60px;
+      }
     }
     &__hero-wrap {
-      height: 560px;
+      min-height: 560px;
     }
     &__hero-partner {
       width: 611px;

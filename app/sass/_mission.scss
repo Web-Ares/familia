@@ -1,0 +1,164 @@
+
+.mission {
+
+  &__text {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px 15px;
+    margin: 0 auto;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    @include main-font5();
+  }
+  &__info {
+    padding: 40px 0;
+    background: $mission-info-bg;
+  }
+  &__info-pic {
+    text-align: center;
+
+    img {
+      width: 100%;
+      max-width: 470px;
+    }
+  }
+  &__info-text {
+    padding: 33px 0 0 0;
+
+    > p {
+      margin-bottom: 14px;
+      font-size: 18px;
+      line-height: 26px;
+      @include main-font4();
+    }
+  }
+  &__info-text-inner {
+    position: relative;
+    padding: 33px 39px 38px;
+    background-color: rgba(249,249,249,0.9);
+    max-width: 477px;
+
+    p {
+      padding-bottom: 34px;
+      border-bottom: 3px solid $mission-info-border;
+      font-size: 20px;
+      line-height: 26px;
+      @include main-font8();
+    }
+  }
+  &__bottom {
+    position: relative;
+    padding: 40px 0 0;
+  }
+  &__bottom-text {
+
+    p {
+      max-width: 330px;
+      margin-bottom: 30px;
+      font-size: 18px;
+      line-height: 26px;
+      @include main-font4();
+    }
+    span {
+      display: block;
+      width: 100%;
+      max-width: 470px;
+      margin-bottom: 30px;
+      font-size: 23px;
+      line-height: 28px;
+      color: $main-brown-color;
+      @include main-font5();
+    }
+  }
+  &__bottom-pic {
+    padding-bottom: 59%;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .mission {
+
+    &__info {
+
+      .site__centered {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    &__info-pic {
+      display: inline-block;
+      vertical-align: top;
+      width: 49%;
+      padding: 0 0 0 2px;
+
+      img {
+        width: 100%;
+        max-width: 470px;
+      }
+    }
+    &__info-text {
+      display: inline-block;
+      vertical-align: top;
+      width: 48.8%;
+      padding: 33px 0 0 0;
+    }
+    &__info-text-inner {
+      transform: translateX(-50%);
+      padding: 33px 85px 38px 39px;
+    }
+    &__bottom {
+      padding: 40px 0;
+    }
+    &__bottom-text {
+      width: 50%;
+      margin-left: 1px;
+
+      span {
+        margin-bottom: 0;
+      }
+    }
+    &__bottom-pic {
+      position: absolute;
+      height: 100%;
+      width: 49.9%;
+      padding-bottom: 0;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+@media (min-width: $tablet-landscape) {
+
+
+}
+
+@media (min-width: $desktop) {
+
+  .mission {
+
+    &__text {
+      padding: 94px 0 92px;
+    }
+    &__info {
+      padding: 120px 0 117px;
+    }
+    &__bottom {
+      padding: 148px 0 146px;
+    }
+    &__bottom-text {
+
+      p {
+        margin-bottom: 65px;
+      }
+      span {
+        font-size: 30px;
+        line-height: 40px;
+      }
+    }
+  }
+}
