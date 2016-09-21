@@ -20,25 +20,29 @@ var paths = {
         {
             dist: 'index.min.js',
             contains: [
-                'app/js/jquery.main.js'
+                'app/js/jquery.main.js',
+                'app/js/jquery.animation.js'
             ]
         },
         {
             dist: 'our-mission.min.js',
             contains: [
-                'app/js/jquery.main.js'
+                'app/js/jquery.main.js',
+                'app/js/jquery.animation.js'
             ]
         },
         {
             dist: 'contact.min.js',
             contains: [
-                'app/js/jquery.main.js'
+                'app/js/jquery.main.js',
+                'app/js/jquery.animation.js'
             ]
         },
         {
             dist: 'our-method.min.js',
             contains: [
-                'app/js/jquery.main.js'
+                'app/js/jquery.main.js',
+                'app/js/jquery.animation.js'
             ]
         }
     ],

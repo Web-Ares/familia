@@ -315,6 +315,13 @@
 
   .site {
 
+    &__hero-title {
+      opacity: 0;
+
+      &.animation {
+        animation: fade-in 1s forwards .3s;
+      }
+    }
     &__hero-wrap {
       height: 325px;
     }
@@ -339,7 +346,6 @@
         }
       }
     }
-
   }
 
 }

@@ -9,7 +9,7 @@
 
         } );
 
-        $.each( $('.language'), function(){
+        $.each( $( '.language' ), function(){
 
             new Language ( $(this) )
 
@@ -21,8 +21,8 @@
 
         //private properties
         var _obj = obj,
-            _languagesDropDown = $(".language__dropdown"),
-            _languagesItem = $('.language__item'),
+            _languagesDropDown = $( '.language__dropdown' ),
+            _languagesItem = $( '.language__item' ),
             _languagesDropDownSpeed = 200,
             _mouseenterTimeout,
             _mouseleaveTimeout;
@@ -31,17 +31,21 @@
         var _addEvents = function () {
 
                 _languagesItem.on({
-                    click: function (e) {
-                        if($(this).parent().hasClass("language__active")) {
+                    click: function ( e ) {
+
+                        if( $( this ).parent().hasClass( 'language__active' ) ) {
+
                             e.preventDefault();
+
                         }
-                        if($(this).parent().hasClass("language__dropdown")) {
 
-                            $(".language__active .language__item").appendTo(_languagesDropDown);
+                        if( $( this ).parent().hasClass( 'language__dropdown' ) ) {
 
-                            $(this).appendTo(".language__active");
+                            $( '.language__active .language__item' ).appendTo( _languagesDropDown );
 
-                            _languagesDropDown.stop(true, true).slideUp(_languagesDropDownSpeed);
+                            $( this ).appendTo( '.language__active' );
+
+                            _languagesDropDown.stop( true, true ).slideUp( _languagesDropDownSpeed );
 
                         }
                     }
@@ -49,11 +53,11 @@
 
                 _obj.on({
                     mouseenter: function () {
-                        clearTimeout(_mouseleaveTimeout);
+                        clearTimeout( _mouseleaveTimeout );
 
-                        _mouseenterTimeout = setTimeout(function(){
+                        _mouseenterTimeout = setTimeout( function() {
 
-                            _languagesDropDown.stop(true, true).slideDown(_languagesDropDownSpeed);
+                            _languagesDropDown.stop( true, true ).slideDown( _languagesDropDownSpeed );
 
                         }, 200);
                     }
@@ -62,13 +66,13 @@
                 _obj.on({
                     mouseleave: function () {
 
-                        clearTimeout(_mouseenterTimeout);
+                        clearTimeout( _mouseenterTimeout );
 
-                        _mouseleaveTimeout = setTimeout(function(){
+                        _mouseleaveTimeout = setTimeout( function() {
 
-                            if(_languagesDropDown.is(":visible")) {
+                            if(_languagesDropDown.is( ':visible' ) ) {
 
-                                _languagesDropDown.stop(true, true).slideUp(_languagesDropDownSpeed);
+                                _languagesDropDown.stop( true, true ).slideUp( _languagesDropDownSpeed );
                             }
 
                         }, 200);
