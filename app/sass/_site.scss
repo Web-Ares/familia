@@ -338,6 +338,7 @@
       padding: 10px 0 0;
 
       h1 {
+        opacity: 0;
         font-size: 32px;
         line-height: 45px;
 
@@ -345,9 +346,20 @@
           font-size: 40px;
         }
       }
+      .btn {
+        opacity: 0;
+      }
+      &.animation {
+
+        h1 {
+          animation: fade-in 1s forwards;
+        }
+        .btn {
+          animation: fade-in 1s forwards .6s;
+        }
+      }
     }
   }
-
 }
 @media (min-width: $tablet-landscape) {
   .site {

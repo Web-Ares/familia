@@ -107,8 +107,12 @@
       padding: 33px 0 0 0;
     }
     &__info-text-inner {
-      transform: translateX(-50%);
       padding: 33px 85px 38px 39px;
+      @include transition(transform, .5, 0);
+
+      &.animation {
+        transform: translateX(-50%);
+      }
     }
     &__bottom {
       padding: 40px 0;
@@ -128,6 +132,12 @@
       padding-bottom: 0;
       top: 0;
       right: 0;
+      -webkit-filter: blur(5px);
+      @include transition(filter, .5, 0);
+
+      &.animation {
+        -webkit-filter: blur(0px);
+      }
     }
   }
 }
