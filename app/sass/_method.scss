@@ -1,0 +1,279 @@
+
+.method {
+  background: #f9f9f9;
+  padding-bottom: 40px;
+  padding-top: 40px;
+
+  &__list {
+    margin-bottom: 80px;
+  }
+  &__item {
+    position: relative;
+    padding: 170px 17px 10px;
+    margin-bottom: 40px;
+    text-align: center;
+
+    &:last-child {
+
+      .method__item-lines {
+        display: none;
+      }
+    }
+  }
+  &__item-text {
+    width: 100%;
+    max-width: 570px;
+    margin: 0 15px;
+    color: $main-text-color;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.5px;
+    @include  main-font4();
+    @include transition(color, .3, 0);
+  }
+  &__item-pic {
+    @include absoluteCenterX();
+    z-index: 2;
+    width: 140px;
+    height: 140px;
+    top: 0;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px 0 rgba(178, 142, 123, 0.1);
+    background: $main-white-color;
+    @include transition(all, .3, 0);
+
+    > svg {
+      @include absoluteCenter();
+      width: 36%;
+      height: auto;
+
+      path {
+        fill: $main-brown-color;
+        @include transition(all, .3, 0);
+      }
+    }
+  }
+  &__slogan {
+    padding: 40px 15px;
+    background: $main-white-color;
+    box-shadow: 0 10px 20px 0 rgba(178, 142, 123, 0.1);
+    text-align: center;
+  }
+  &__slogan-title {
+    display: block;
+    font-size: 18px;
+    line-height: 31px;
+    color: #e6cab4;
+    @include main-font5();
+
+    span {
+      display: block;
+      font-size: 28px;
+      letter-spacing: -0.2px;
+      color: $main-brown-color;
+    }
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .method {
+
+    &__item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 278px;
+      padding: 0 17px;
+      margin-bottom: 20px;
+
+      &_right {
+        justify-content: flex-end;
+        text-align: right;
+      }
+      &_left {
+        justify-content: flex-start;
+        text-align: left;
+
+        .method__item-lines {
+
+          &:after {
+            bottom: auto;
+          }
+          &:before {
+            left: 0;
+            bottom: 100%;
+          }
+        }
+      }
+      &_center {
+        justify-content: center;
+        text-align: center;
+        flex-flow: column;
+        margin-bottom: 60px;
+
+        .method__item-text {
+          margin-bottom: 23px;
+        }
+        .method__item-lines {
+          right: 86px;
+          bottom: -49px;
+          left: 49.95%;
+
+          &:after {
+            bottom: auto;
+          }
+          &:before {
+            left: 0;
+            bottom: 100%;
+          }
+        }
+
+        &_bottom {
+
+          .method__item-text {
+            margin-bottom: 21px;
+          }
+        }
+      }
+      &.active,
+      &.prev {
+
+        .method__item-pic {
+          background: $main-white-color;
+          border-color: transparent;
+
+          > svg {
+
+            path {
+              fill: $main-brown-color;
+            }
+          }
+        }
+        .method__item-text {
+          color: $main-text-color;
+        }
+        .method__item-lines {
+          background: $main-brown-color;
+
+          &:before,
+          &:after {
+            background: $main-brown-color;
+          }
+        }
+      }
+      &.active {
+
+      }
+      &.prev {
+
+      }
+      &_penult {
+        margin-bottom: 58px;
+
+        .method__item-lines {
+          right: 86px;
+          left: 49.95%;
+          bottom: -11px;
+
+          &:after {
+            bottom: 100%;
+          }
+          &:before {
+            left: 0;
+            bottom: auto;
+          }
+        }
+      }
+      &:last-child {
+
+        .method__item-text {
+          max-width: 400px;
+          margin-bottom: 0;
+          margin-top: 22px;
+        }
+      }
+    }
+    &__item-text {
+      display: inline-block;
+      vertical-align: top;
+      max-width: 500px;
+      color: #999;
+    }
+    &__item-pic {
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      left: 0;
+      border: 1px solid #e6cab4;
+      background: #f9f9f9;
+      transform: translateX(0);
+      -webkit-transform: translateX(0);
+
+      > svg {
+
+        path {
+          fill: #e6cab4;
+        }
+      }
+    }
+    &__item-lines {
+      position: absolute;
+      bottom: -10px;
+      left: 86px;
+      right: 86px;
+      height: 1px;
+      background: #e6cab4;
+      @include transition(background, .3, 0);
+
+      &:before,
+      &:after {
+        position: absolute;
+        height: 80px;
+        width: 1px;
+        background: #e6cab4;
+        @include transition(background, .3, 0);
+        content: '';
+      }
+      &:before {
+        left: 0;
+      }
+      &:after {
+        right: 0;
+        bottom: 100%;
+      }
+    }
+    &__slogan {
+      padding: 87px 15px 94px;
+    }
+    &__slogan-title {
+      font-size: 24px;
+      line-height: 39px;
+
+      span {
+        font-size: 36px;
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet-landscape) {
+
+
+}
+
+@media (min-width: $desktop) {
+
+  .method {
+    padding-bottom: 120px;
+    padding-top: 81px;
+
+    &__list {
+      margin-bottom: 80px;
+    }
+    &__item-text {
+      max-width: 570px;
+      margin: 0 45px;
+    }
+  }
+}
