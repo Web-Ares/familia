@@ -23,7 +23,6 @@
   &__item-text {
     width: 100%;
     max-width: 570px;
-    margin: 0 15px;
     color: $main-text-color;
     font-size: 18px;
     line-height: 26px;
@@ -215,6 +214,7 @@
       display: inline-block;
       vertical-align: top;
       max-width: 500px;
+      margin: 0 15px;
       color: $mrthod-item-text-color;
     }
     &__item-pic {
