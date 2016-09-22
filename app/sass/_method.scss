@@ -1,6 +1,6 @@
 
 .method {
-  background: #f9f9f9;
+  background: $main-inner-bg;
   padding-bottom: 40px;
   padding-top: 40px;
 
@@ -63,7 +63,7 @@
     display: block;
     font-size: 18px;
     line-height: 31px;
-    color: #e6cab4;
+    color: $main-brown-light-color;
     @include main-font5();
 
     span {
@@ -163,7 +163,7 @@
         .method__item-pic {
 
           > div {
-            border-color: #e6cab4;
+            border-color: $main-brown-light-color;
             animation: circles 3s infinite;
           }
 
@@ -215,21 +215,21 @@
       display: inline-block;
       vertical-align: top;
       max-width: 500px;
-      color: #c9c9c9;
+      color: $mrthod-item-text-color;
     }
     &__item-pic {
       position: relative;
       display: inline-block;
       vertical-align: top;
       left: 0;
-      background: #f9f9f9;
+      background: $main-inner-bg;
       transform: translateX(0);
       -webkit-transform: translateX(0);
 
       > svg {
 
         path {
-          fill: #e6cab4;
+          fill: $main-brown-light-color;
         }
       }
 
@@ -239,7 +239,7 @@
         right: 0;
         bottom: 0;
         left: 0;
-        border: 1px solid #e6cab4;
+        border: 1px solid $main-brown-light-color;
         border-radius: 50%;
       }
       &:before,
@@ -255,17 +255,17 @@
         content: '';
       }
       &:before {
-        top: -20px;
-        right: -20px;
-        bottom: -20px;
-        left: -20px;
+        top: -15px;
+        right: -15px;
+        bottom: -15px;
+        left: -15px;
         border-color: rgba(230,202,180, .6);
       }
       &:after {
-        top: -40px;
-        right: -40px;
-        bottom: -40px;
-        left: -40px;
+        top: -30px;
+        right: -30px;
+        bottom: -30px;
+        left: -30px;
         border-color: rgba(230,202,180, .3);
       }
     }
@@ -275,7 +275,7 @@
       left: 86px;
       right: 86px;
       height: 1px;
-      background: #e6cab4;
+      background: $main-brown-light-color;
       @include transition(background, .3, 0);
 
       &:before,
@@ -283,7 +283,7 @@
         position: absolute;
         height: 80px;
         width: 1px;
-        background: #e6cab4;
+        background: $main-brown-light-color;
         @include transition(background, .3, 0);
         content: '';
       }

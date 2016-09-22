@@ -281,14 +281,14 @@
       &.animation {
 
         .contact__address-circle {
-          border-color: #e6cab4;
+          border-color: $main-brown-light-color;
           animation: circles 3s infinite;
         }
         &:before {
-          animation: circles 3s infinite .5s;
+          animation: circles 3s infinite .55s;
         }
         &:after {
-          animation: circles 3s infinite .9s;
+          animation: circles 3s infinite 1.1s;
         }
       }
     }

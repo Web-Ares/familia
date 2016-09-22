@@ -55,6 +55,8 @@
 
                 var curElem = elem;
 
+                console.log(curElem);
+
                 if (!curElem.hasClass( 'active' )) {
 
                     curElem.prev().removeClass( 'active' );
