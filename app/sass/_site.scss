@@ -70,7 +70,7 @@
   }
   &__menu-btn {
     display: block;
-    position: absolute;
+    position: fixed;
     z-index: 11;
     top: 13px;
     right: 12px;
@@ -81,6 +81,7 @@
     border: none;
     user-select: none;
     cursor: pointer;
+    @include transition(all, .4, 0);
 
     span {
       display: block;
@@ -114,6 +115,7 @@
         transition-property: bottom, transform, background;
       }
     }
+
     &.opened {
 
       span {
@@ -143,6 +145,19 @@
         &:before,
         &:after {
           background: $main-white-color;
+        }
+      }
+    }
+    &.active {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+
+      span {
+        background: $main-brown-color;
+
+        &:before,
+        &:after {
+          background: $main-brown-color;
         }
       }
     }
@@ -232,11 +247,12 @@
     width: 100%;
     min-height: 227px;
     background-size: cover;
-    background-position: center;
+    background-position: left center;
 
     &_inner {
       margin-top: -50px;
       padding: 100px 15px 50px;
+      background-position: center center;
 
       &:after {
         position: absolute;

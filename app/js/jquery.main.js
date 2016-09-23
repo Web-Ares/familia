@@ -119,8 +119,33 @@
 
                         _resetStyle();
 
+                    },
+                    scroll: function () {
+
+                        _checkScroll();
+
                     }
                 } );
+
+            },
+            _checkScroll = function () {
+
+                var windowScroll = _window.scrollTop(),
+                    heroHeight = $('.site__hero').innerHeight();
+
+                if ( windowScroll > heroHeight ) {
+
+                    if ( !_showBtn.hasClass( 'active' ) ) {
+
+                        _showBtn.addClass('active')
+
+                    }
+
+                } else {
+
+                    _showBtn.removeClass('active')
+
+                }
 
             },
             _openMenu = function( elem )  {

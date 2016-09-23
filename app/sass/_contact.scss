@@ -154,9 +154,10 @@
         height: 56px;
         margin-bottom: 20px;
         padding: 16px 20px;
-        border: 1px solid $main-border-color;
+        border: none;
+        border-bottom: 2px solid #ddd;
         border-radius: 5px;
-        box-shadow: inset 0 1px 3px 0 rgba(1, 1, 1, 0.1);
+        //box-shadow: inset 0 1px 3px 0 rgba(1, 1, 1, 0.1);
         font-size: 16px;
         line-height: 20px;
         color: $main-brown-color;
@@ -177,7 +178,7 @@
         }
 
         &:focus {
-          box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+          //box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.1);
           border-color: $contact-field-focus;
 
           &::-webkit-input-placeholder {
@@ -198,13 +199,14 @@
         height: 208px;
       }
       button {
-        height: 56px;
-        width: 100%;
+        position: relative;
+        height: 80px;
+        width: 80px;
         background: $main-brown-color;
-        border-radius: 5px;
+        box-shadow: 0 10px 16px 0 rgba(216, 207, 200, 0.3);
+        border-radius: 50%;
         border: none;
         padding: 0;
-        box-shadow: none;
         font-size: 16px;
         line-height: 26px;
         color: $main-white-color;
@@ -212,9 +214,23 @@
         font-weight: 700;
         @include transition(background, .3, 0);
 
-        &:hover {
-          background: $btn-hover-back;
+        &:after {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 28px;
+          height: 29.5px;
+          margin: - 15px 0 0 -14px;
+          background: url(../img/plane-icon.png) no-repeat;
+          background-size: contain;
+          content: '';
         }
+
+        &:hover:after {
+          -webkit-animation: plane .6s forwards ease-in-out;
+          animation: plane .6s forwards ease-in-out;
+        }
+
       }
     }
   }
@@ -332,10 +348,6 @@
   }
 }
 
-@media (min-width: $tablet-landscape) {
-
-}
-
 @media (min-width: $desktop) {
 
   .contact {
@@ -391,14 +403,17 @@
           width: 370px;
         }
         &:nth-child(2) {
-          width: 570px;
-          margin-right: 26px;
+          width: 670px;
+          //margin-right: 26px;
         }
         &:nth-child(3) {
-          width: 170px;
+          width: auto;
         }
+
         button {
-          height: 208px;
+          @include absoluteCenterY();
+          top: 46.4%;
+          right: 17px;
         }
       }
     }
@@ -412,5 +427,7 @@
       }
     }
   }
-
 }
+
+
+
